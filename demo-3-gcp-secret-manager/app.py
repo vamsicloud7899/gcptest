@@ -29,7 +29,7 @@ def get_numeric_project_id():
 def read_secrets():
 
     my_secret = secret_manager_client.access_secret_version(
-        name=f"projects/{get_numeric_project_id()}/secrets/{secret_name}/versions/latest"
+        name=f"projects/{get_numeric_project_id()}/secrets/{secret_name}/versions/1"
     )
 
     my_secret_str = my_secret.payload.data.decode('UTF-8')
